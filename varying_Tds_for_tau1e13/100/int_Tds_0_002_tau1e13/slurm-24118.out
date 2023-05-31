@@ -1,0 +1,15 @@
+Traceback (most recent call last):
+  File "main_integration.py", line 140, in <module>
+    sol = solve_ivp(func,u_span,y0,method='RK45',max_step=step_max_num)
+  File "/opt/ohpc/pub/apps/software/Anaconda3/5.3.0/lib/python3.7/site-packages/scipy/integrate/_ivp/ivp.py", line 454, in solve_ivp
+    solver = method(fun, t0, y0, tf, vectorized=vectorized, **options)
+  File "/opt/ohpc/pub/apps/software/Anaconda3/5.3.0/lib/python3.7/site-packages/scipy/integrate/_ivp/rk.py", line 99, in __init__
+    self.f = self.fun(self.t, self.y)
+  File "/opt/ohpc/pub/apps/software/Anaconda3/5.3.0/lib/python3.7/site-packages/scipy/integrate/_ivp/base.py", line 139, in fun
+    return self.fun_single(t, y)
+  File "/opt/ohpc/pub/apps/software/Anaconda3/5.3.0/lib/python3.7/site-packages/scipy/integrate/_ivp/base.py", line 21, in fun_wrapped
+    return np.asarray(fun(t, y), dtype=dtype)
+  File "main_integration.py", line 131, in func
+    h1, h2, h3 = y
+ValueError: not enough values to unpack (expected 3, got 2)
+srun: error: compute-10: task 0: Exited with exit code 1
